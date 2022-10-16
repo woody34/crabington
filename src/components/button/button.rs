@@ -3,7 +3,8 @@ use yew::prelude::*;
 #[derive(Clone, PartialEq)]
 pub enum ButtonPreset {
     Primary,
-    Secondary
+    Secondary,
+    Tertiary,
 }
 
 fn default_button_preset() -> ButtonPreset {
@@ -34,9 +35,12 @@ pub struct ButtonProps {
 
 #[function_component(Button)]
 pub fn button(ButtonProps { preset, label, classes, children }: &ButtonProps) -> Html {
-    let primary_classes: &str = "bg-indigo-600 text-white shadow-sm hover:bg-indigo-700";
-    let secodary_classes: &str = "bg-indigo-100 text-indigo-700 hover:bg-indigo-200";
-    let preset_classes: &str = if preset == &ButtonPreset::Primary { primary_classes } else { secodary_classes };
+    let mut preset_classes = "";
+    match preset {
+        &ButtonPreset::Primary => preset_classes = "bg-primary-600 text-white shadow-sm hover:bg-primary-700",
+        &ButtonPreset::Secondary => preset_classes = "bg-secondary-100 text-secondary-700 hover:bg-secondary-200",
+        &ButtonPreset::Tertiary => preset_classes = "bg-tertiary-100 text-tertiary-700 hover:bg-tertiary-200",
+    }
 
     let base_classes = "m-2 inline-flex items-center rounded-md border border-transparent px-4 py-2 text-sm font-medium";
 

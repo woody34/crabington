@@ -8,6 +8,7 @@ pub fn atoms() -> Html {
         <div class="content">
             <Button preset={ButtonPreset::Primary} label="Primary">{ "test" }</Button>
             <Button preset={ButtonPreset::Secondary} label="Secondary">{ "test" }</Button>
+            <Button preset={ButtonPreset::Tertiary} label="Tertiary">{ "test" }</Button>
         </div>
     }
 }

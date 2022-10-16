@@ -3,7 +3,7 @@ use yew::prelude::*;
 #[function_component(Header)]
 pub fn header() -> Html {
     html! {
-        <header class="bg-white shadow-sm lg:static lg:overflow-y-visible">
+        <header class="bg-white shadow-sm shadow-primary-200 lg:static lg:overflow-y-visible">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="relative flex justify-between lg:gap-8 xl:grid xl:grid-cols-12">
                     <div class="flex md:absolute md:inset-y-0 md:left-0 lg:static xl:col-span-2">

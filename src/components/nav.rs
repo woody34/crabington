@@ -14,8 +14,8 @@ pub fn isActiveRoute(path: String, expected: String) -> bool {
 /// Nav component
 #[function_component(Nav)]
 pub fn nav() -> Html {
-    let active_route_class = "bg-gray-200 text-gray-900 group flex items-center px-3 py-2 text-sm font-medium rounded-md";
-    let ddinactive_route_class = "text-gray-700 hover:bg-gray-50 group flex items-center px-3 py-2 text-sm font-medium rounded-md";
+    let active_route_class = "bg-primary-200 text-primary-900 group flex items-center px-3 py-2 text-sm font-medium rounded-md transition ease-in-out delay-150";
+    let ddinactive_route_class = "text-primary-700 hover:bg-primary-50 group flex items-center px-3 py-2 text-sm font-medium rounded-md transition ease-in-out delay-150";
     let route: AppRoute = use_route().unwrap_or_default();
     let active_path = route.to_path();
 
@@ -25,30 +25,37 @@ pub fn nav() -> Html {
                 <div class="space-y-1 pb-8">
                     <Link<AppRoute> to={AppRoute::Home}>
                         <a class={ if active_path == "/".to_string() { active_route_class } else { ddinactive_route_class } } aria-current="page">
-                            // <HomeIcon classes={ "text-gray-400 group-hover:text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" } />
-                            <i class="fa-regular fa-house-chimney-window fa-2xl text-gray-400 group-hover:text-gray-500 flex-shrink-0 -ml-1 mr-3"></i>
-                            <span class="truncate">{"Home"}</span>
+                            <span class="flex flex-row items-center justify-center">
+                                <i class="fa-regular fa-house-chimney-window fa-xl text-primary-400 group-hover:text-primary-500 flex-shrink-0 transition ease-in-out delay-150 w-10"></i>
+                                <span class="truncate">{"Home"}</span>
+                            </span>
                         </a>
                     </Link<AppRoute>>
 
                     <Link<AppRoute> to={AppRoute::Atoms}>
                         <a class={ if active_path == "/atoms".to_string() { active_route_class } else { ddinactive_route_class } } aria-current="page">
-                            <i class="fa-regular fa-atom-simple fa-2xl text-gray-400 group-hover:text-gray-500 flex-shrink-0 -ml-1 mr-3"></i>
-                            <span class="truncate">{"Atoms"}</span>
+                            <span class="flex flex-row items-center justify-center">
+                                <i class="fa-regular fa-atom-simple fa-xl scale-95 pl-0.5 text-primary-400 group-hover:text-primary-500 flex-shrink-0 transition ease-in-out delay-150 w-10"></i>
+                                <span class="truncate">{"Atoms"}</span>
+                            </span>
                         </a>
                     </Link<AppRoute>>
 
                     <Link<AppRoute> to={AppRoute::Molecules}>
                         <a class={ if active_path == "/molecules".to_string() { active_route_class } else { ddinactive_route_class } }>
-                            <i class="fa-regular fa-chart-network fa-2xl text-gray-400 group-hover:text-gray-500 flex-shrink-0 -ml-1 mr-3"></i>
-                            <span class="truncate">{"Molecules"}</span>
+                            <span class="flex flex-row items-center justify-center">
+                                <i class="fa-regular fa-chart-network fa-xl scale-90 text-primary-400 group-hover:text-primary-500 flex-shrink-0 transition ease-in-out delay-150 w-10"></i>
+                                <span class="truncate">{"Molecules"}</span>
+                            </span>
                         </a>
                     </Link<AppRoute>>
 
                     <Link<AppRoute> to={AppRoute::Organisms}>
                         <a class={ if active_path == "/organisms".to_string() { active_route_class } else { ddinactive_route_class } }>
-                            <i class="fa-regular fa-bacterium fa-2xl text-gray-400 group-hover:text-gray-500 flex-shrink-0 -ml-1 mr-3"></i>
-                            <span class="truncate">{"Organisms"}</span>
+                            <span class="flex flex-row items-center justify-center">
+                                <i class="fa-regular fa-bacterium fa-xl text-primary-400 pl-0.5 group-hover:text-primary-500 flex-shrink-0 transition ease-in-out delay-150 w-10"></i>
+                                <span class="truncate">{"Organisms"}</span>
+                            </span>
                         </a>
                     </Link<AppRoute>>
                 </div>
