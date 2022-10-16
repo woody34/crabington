@@ -1,6 +1,6 @@
 # Crabington
 
-Crabington is my first Rust/Wasm project. It is a component library written in rust for the Yew framework. It will follow Atomic Design methodology.
+Crabington is my first Rust/Wasm project. It is a component library written in rust for the Yew framework. It will follow Atomic Design methodology. Hosted on GCR
 
 ## How to install
 
