@@ -1,6 +1,6 @@
-# My Awesome Yew App
+# Crabington
 
-This is the official base template for [Create Yew App](https://github.com/jetli/create-yew-app).
+Crabington is my first Rust/Wasm project. It is a component library written in rust for the Yew framework. It will follow Atomic Design methodology.
 
 ## How to install
 
