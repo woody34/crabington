@@ -16,7 +16,7 @@ pub fn about() -> Html {
     };
 
     html! {
-        <div class="app">
+        <div class="content">
             <header class="app-header">
                 <p>
                     <a
