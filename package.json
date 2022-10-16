@@ -9,9 +9,13 @@
     "test": "wasm-pack test --headless --chrome",
     "tw:dev": "tailwindcss -i static/input.css -o static/tailwind.css --watch",
     "tw": "tailwindcss -i static/input.css -o static/tailwind.css",
-    "dev": "pm2-dev ./pm2.config.js"
+    "dev": "pm2-dev ./pm2.config.js",
+    "docker:auth": "gcloud auth configure-docker us-central1-docker.pkg.dev",
+    "docker:push": "docker build -t us-central1-docker.pkg.dev/personal-projects-365623/cicd/crabington:latest . && docker push us-central1-docker.pkg.dev/personal-projects-365623/cicd/crabington",
+    "release": "gcloud run deploy crabington --image us-central1-docker.pkg.dev/personal-projects-365623/cicd/crabington:latest"
   },
   "dependencies": {
+    "@tailwindcss/forms": "^0.5.3",
     "sass": "^1.45.1",
     "serve": "^14.0.1",
     "tailwindcss": "^3.1.8"
