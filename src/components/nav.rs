@@ -3,8 +3,6 @@ use yew_router::prelude::*;
 use crate::routes::AppRoute;
 use crate::hooks::use_active_route::use_active_route;
 
-use log::{info, trace, warn};
-
 /// Nav component
 #[function_component(Nav)]
 pub fn nav() -> Html {

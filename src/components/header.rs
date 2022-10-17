@@ -1,7 +1,4 @@
 use yew::prelude::*;
-use yew_router::prelude::*;
-use crate::routes::*;
-use crate::hooks::use_active_route::*;
 use crate::components::nav_mobile::*;
 
 #[function_component(Header)]

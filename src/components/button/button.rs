@@ -29,13 +29,11 @@ pub struct ButtonProps {
 
     #[prop_or_else(default_button_class)]
     pub classes: String,
-
-    pub children: Children
 }
 
 #[function_component(Button)]
-pub fn button(ButtonProps { preset, label, classes, children }: &ButtonProps) -> Html {
-    let mut preset_classes = "";
+pub fn button(ButtonProps { preset, label, classes }: &ButtonProps) -> Html {
+    let preset_classes;
     match preset {
         &ButtonPreset::Primary => preset_classes = "bg-primary-600 text-white shadow-sm hover:bg-primary-700",
         &ButtonPreset::Secondary => preset_classes = "bg-secondary-100 text-secondary-700 hover:bg-secondary-200",

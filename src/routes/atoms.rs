@@ -6,9 +6,9 @@ use crate::components::button::button::ButtonPreset;
 pub fn atoms() -> Html {
     html! {
         <div class="content">
-            <Button preset={ButtonPreset::Primary} label="Primary">{ "test" }</Button>
-            <Button preset={ButtonPreset::Secondary} label="Secondary">{ "test" }</Button>
-            <Button preset={ButtonPreset::Tertiary} label="Tertiary">{ "test" }</Button>
+            <Button preset={ButtonPreset::Primary} label="Primary"></Button>
+            <Button preset={ButtonPreset::Secondary} label="Secondary"></Button>
+            <Button preset={ButtonPreset::Tertiary} label="Tertiary"></Button>
         </div>
     }
 }

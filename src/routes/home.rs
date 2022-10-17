@@ -1,7 +1,4 @@
 use yew::prelude::*;
-use yew_hooks::prelude::*;
-use crate::components::button::button::Button;
-use crate::components::button::button::ButtonPreset;
 
 /// Home page
 #[function_component(Home)]
