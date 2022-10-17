@@ -12,11 +12,11 @@ fn default_button_preset() -> ButtonPreset {
 }
 
 fn default_button_label() -> String {
-    "Button".to_string()
+    String::new()
 }
 
 fn default_button_class() -> String {
-    "".to_string()
+    String::new()
 }
 
 #[derive(Properties, PartialEq)]
@@ -40,7 +40,7 @@ pub fn button(ButtonProps { preset, label, classes }: &ButtonProps) -> Html {
         &ButtonPreset::Tertiary => preset_classes = "bg-tertiary-100 text-tertiary-700 hover:bg-tertiary-200",
     }
 
-    let base_classes = "m-2 inline-flex items-center rounded-md border border-transparent px-4 py-2 text-sm font-medium";
+    let base_classes = "m-2 rounded-md border border-transparent px-4 py-2 text-sm font-medium";
 
     let classes = classes!(
         base_classes,

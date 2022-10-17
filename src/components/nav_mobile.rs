@@ -6,8 +6,8 @@ use crate::hooks::use_active_route::*;
 /// Nav component
 #[function_component(NavMobile)]
 pub fn nav_mobile() -> Html {
-    let active_route_class = "bg-primary-200 text-primary-900 group flex items-center px-3 py-2 text-2xl font-medium rounded-md transition ease-in-out delay-150";
-    let inactive_route_class = "text-primary-700 hover:bg-primary-50 group flex items-center px-3 py-2 text-2xl font-medium rounded-md transition ease-in-out delay-150";
+    let active_route_class = "bg-primary-200 text-primary-900 group flex items-center px-3 py-2 text-lg font-medium rounded-md transition ease-in-out delay-150";
+    let inactive_route_class = "text-primary-700 hover:bg-primary-50 group flex items-center px-3 py-2 text-lg font-medium rounded-md transition ease-in-out delay-150";
     let active_path = use_active_route();
 
     html! {
@@ -49,7 +49,7 @@ pub fn nav_mobile() -> Html {
                 </a>
             </Link<AppRoute>>
             <div class="flex justify-center">
-                <div><a href="https://github.com/woozdy34/crabington" target="_blank" class="px-3 py-2"><i class="fa-brands fa-github fa-2xl"></i></a></div>
+                <div><a href="https://github.com/woody34/crabington" target="_blank" class="px-3 py-2"><i class="fa-brands fa-github fa-2xl"></i></a></div>
             </div>
         </div>
     }

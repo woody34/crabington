@@ -10,7 +10,7 @@ pub fn header() -> Html {
     };
 
     html! {
-        <header class="bg-white shadow-sm shadow-primary-200 lg:static lg:overflow-y-visible">
+        <header class="bg-white shadow-sm shadow-primary-200 lg:static lg:overflow-y-visible mt-4">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="relative flex justify-between lg:gap-8 xl:grid xl:grid-cols-12">
                     <div class="flex md:absolute md:inset-y-0 md:left-0 lg:static xl:col-span-2">
@@ -40,7 +40,7 @@ pub fn header() -> Html {
                         // <!-- Mobile menu button -->
                         <button
                             type="button"
-                            class="-mx-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-rose-500"
+                            class="-mx-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500"
                             onclick={toggle_show}
                         >
                             <span class="sr-only">{"Open menu"}</span>
@@ -48,8 +48,8 @@ pub fn header() -> Html {
                         </button>
                     </div>
                     <div class="hidden lg:flex lg:items-center lg:justify-end xl:col-span-4">
-                        <div class="flex flex-shrink-0 items-center">
-                            <a href="https://github.com/woody34/crabington" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a>
+                        <div class="flex flex-shrink-0 items-center -mt-1">
+                            <a href="https://github.com/woody34/crabington" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
                         </div>   
                     </div>
                 </div>

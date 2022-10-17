@@ -27,4 +27,4 @@ npm run build
 ```sh
 # Runs tests
 npm test
-```# crabington
+```
