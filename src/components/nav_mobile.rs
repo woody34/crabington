@@ -11,7 +11,7 @@ pub fn nav_mobile() -> Html {
     let active_path = use_active_route();
 
     html! {
-        <div class="mx-auto max-w-3xl space-y-1 px-2 pt-2 pb-3 sm:px-4 transition ease-in-out delay-150">
+        <div class="mx-auto max-w-3xl space-y-1 px-2 pt-2 pb-3 sm:px-4">
             // <!-- Current: "bg-gray-100 text-gray-900", Default: "hover:bg-gray-50" -->
             <Link<AppRoute> to={AppRoute::Home}>
                 <a class={ if active_path == "/".to_string() { active_route_class } else { inactive_route_class } } aria-current="page">

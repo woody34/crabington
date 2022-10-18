@@ -8,3 +8,27 @@ $grid-color: #ccd4bf;
 	background-size: 20px 20px, 20px 20px;
 	background-position: -1px -1px, -1px -1px;
 }
+
+#dropdown {
+	opacity: 1;
+	transform: translateY(0);
+	transition: .4s ease-in-out;
+}
+​
+#dropdown.show {
+	opacity: 1;
+	transform: translateY(100%);
+	transition: .4s ease-in-out;
+}
+
+#mobile-menu {
+	opacity: 1;
+	transform: translateY(-100%);
+	transition: .4s ease-in-out;
+}
+​
+#mobile-menu.show {
+	opacity: 1;
+	transform: translateY(0);
+	transition: .4s ease-in-out;
+}
