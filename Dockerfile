@@ -1,6 +1,6 @@
-FROM node as builder
+FROM node
 
-EXPOSE 3000
+EXPOSE 8080
 
 # Update default packages
 RUN apt-get update
@@ -10,9 +10,6 @@ RUN apt-get install -y \
     build-essential \
     curl
 
-# Update new packages
-RUN apt-get update
-
 # Get Rust
 RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
 
@@ -20,7 +17,7 @@ ENV PATH="/root/.cargo/bin:${PATH}"
 
 RUN rustup target add wasm32-unknown-unknown
 
-RUN cargo install wasm-pack
+RUN cargo install wasm-pack trunk
 
 WORKDIR /usr/src/crabington
 
@@ -30,6 +27,6 @@ RUN npm i
 
 RUN npm run build
 
-RUN ls -lha dist/
+RUN npm run tw
 
-CMD npx serve dist/
+CMD npx cross-env WASM_PACK_PROFILE=dev parcel static/index.html -p 8080
