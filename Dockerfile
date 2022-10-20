@@ -1,6 +1,6 @@
-FROM node
+FROM node as builder
 
-EXPOSE 8080
+EXPOSE 3000
 
 # Update default packages
 RUN apt-get update
@@ -25,8 +25,8 @@ COPY . .
 
 RUN npm i
 
-RUN npm run build
-
 RUN npm run tw
 
-CMD npx cross-env WASM_PACK_PROFILE=dev parcel static/index.html -p 8080
+RUN npm run build
+
+CMD npx serve dist/ --single
